@@ -3,10 +3,10 @@ using Microsoft.Azure.Management.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
 
-namespace ProvisioningAVM
+namespace ch1_1_2
 {
 
-    class Program
+    class Program1_1_2
     {
         static void Main(string[] args)
         {
