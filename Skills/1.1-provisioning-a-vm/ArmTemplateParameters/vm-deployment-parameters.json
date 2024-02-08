@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "value": "azureadminuser"
+    },
+    "adminPassword": {
+      "value": "Pa$$w0rd!!SSSSWWWW"
+    },
+    "vmSize": {
+      "value": "Standard_D2s_v5"
+    },
+    "nicName": {
+      "value": "az204demoNIC"
+    },
+    "networkSecurityGroupName": {
+      "value": "az204demoNSG"
+    },
+    "subnetName": {
+      "value": "az204demoSubnet"
+    },
+    "location": {
+
+    },
+    "storageAccountName": {
+      "value": "az204catstorage"
+    },
+    "vmName": {
+      "value": "az204demoVM"
+    },
+    "virtualNetworkName": {
+      "value": "az204demoVN"
+    },
+    "publicIpName": {
+      "value": "myPublicIP"
+    },
+    "publicIPAllocationMethod": {
+      "value": "Dynamic"
+    },
+    "publicIpSku": {
+      "value": "Basic"
+    },
+    "dnsLabelPrefix": {
+    },
+    "OSVersion": {
+      "value": "2022-datacenter-azure-edition"
+    },
+    "securityType": {
+      "value": "TrustedLaunch" 
+    }
+  }
+}
