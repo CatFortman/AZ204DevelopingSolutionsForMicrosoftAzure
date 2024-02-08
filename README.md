@@ -15,6 +15,15 @@ Welcome to the repository for skills and labs related to the Microsoft Azure 204
 - **Additional Study Guide Created by Thomas Maurer:**
   - [Thomas Maurer's AZ-204 Study Guide](https://www.thomasmaurer.ch/2020/03/az-204-study-guide-developing-solutions-for-microsoft-azure/)
 
+### Tools Used
+
+- VS Code
+- VS Code Extensions:
+    - ARM Tools
+- dotnet 8.0.101 
+- azure cli 2.52.0
+
+
 ## Skills
 
 Here is a list of skills implemented in this repository that are covered in Developing Solutions for Microsoft Azure 2021 edition:

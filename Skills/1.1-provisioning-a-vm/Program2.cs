@@ -1,14 +1,15 @@
 ﻿using Microsoft.Azure.Management.Compute.Fluent.Models;
 using Microsoft.Azure.Management.Fluent;
+using Microsoft.Azure.Management.Network.Fluent.Models;
 using Microsoft.Azure.Management.ResourceManager.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
 
-namespace ch1_1_1
+// Create a VM with remote access
+namespace step2
 {
 
-    class Program1_1_1
+    class Program2
     {
-        // Uncomment to run skill 1.1
         // static void Main(string[] args)
         // {
         //     // create the management client. This will be used for all the operations
@@ -32,9 +33,11 @@ namespace ch1_1_1
         //     var nicName = "az204NIC";
         //     var adminUser = "azureadminuser";
         //     var password = "pa$$w0rd!2019";
+        //     var publicIPName = "az204PublicIP";
+        //     var nsgName = "az204VNET-NSG";
 
         //     System.Console.WriteLine($"Creating resource group {groupName}...");
-        //     var ResourceGroup = azure.ResourceGroups.Define(groupName)
+        //     var resourceGroup = azure.ResourceGroups.Define(groupName)
         //     .WithRegion(location)
         //     .Create();
 
@@ -47,6 +50,35 @@ namespace ch1_1_1
         //     .WithSubnet(subnetName, subnetAddress)
         //     .Create();
 
+        //     // You need a public IP to be able to connect to the VM from the internet.
+        //     Console.WriteLine($"Creating public IP {publicIPName} ...");
+        //     var publicIp = azure.PublicIPAddresses.Define(publicIPName)
+        //     .WithRegion(location)
+        //     .WithExistingResourceGroup(groupName)
+        //     .Create();
+
+        //     // You need a netwprk security group to control access to the VM.
+        //     Console.WriteLine($"Network security group {nsgName} ...");
+        //     var nsg = azure.NetworkSecurityGroups.Define(nsgName)
+        //     .WithRegion(location)
+        //     .WithExistingResourceGroup(groupName)
+        //     .Create();
+
+        //     // You need a security rule for allowing access to the VM from the internet.
+        //     Console.WriteLine($"Creating a security rule for allowing the remote access ...");
+        //     nsg.Update()
+        //     .DefineRule("Allow-RDP")
+        //     .AllowInbound()
+        //     .FromAnyAddress()
+        //     .FromAnyPort()
+        //     .ToAnyAddress()
+        //     .ToPort(3389)
+        //     .WithProtocol(SecurityRuleProtocol.Tcp)
+        //     .WithPriority(100)
+        //     .WithDescription("Allow-RDP")
+        //     .Attach()
+        //     .Apply();
+
         //     // Any virtual machine needs a network interface for connecting to
         //     // the virtual network.
         //     System.Console.WriteLine($"Creating network interface {nicName}...");
@@ -56,6 +88,8 @@ namespace ch1_1_1
         //     .WithExistingPrimaryNetwork(network)
         //     .WithSubnet(subnetName)
         //     .WithPrimaryPrivateIPAddressDynamic()
+        //     .WithExistingPrimaryPublicIPAddress(publicIp)
+        //     .WithExistingNetworkSecurityGroup(nsg)
         //     .Create();
 
         //     // Create the vm.
