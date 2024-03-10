@@ -22,11 +22,12 @@ Welcome to the repository for skills and labs related to the Microsoft Azure 204
     - ARM Tools
 - dotnet 8.0.101 
 - azure cli 2.52.0
+- Docker Desktop
 
 
 ## Skills
 
-Here is a list of skills implemented in this repository that are covered in Developing Solutions for Microsoft Azure 2021 edition:
+Here is a list of skills included in this repository, along with links to extra materials for review that are covered in Developing Solutions for Microsoft Azure 2021 edition:
 
 * Skill 1.1: Implement solutions that use virtual machines (COMPLETED)
 * Skill 1.2: Create Azure App Service web apps
