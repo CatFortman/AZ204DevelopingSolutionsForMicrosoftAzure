@@ -19,7 +19,11 @@ Welcome to the repository for skills and labs related to the Microsoft Azure 204
 
 - VS Code
 - VS Code Extensions:
-    - ARM Tools
+    - C# Dev Kit (Microsoft)
+    - Bicep (Microsoft)
+    - Azure Resources (Microsoft)
+    - Azure Tools (Microsoft)
+- Visual Studio 2022
 - dotnet 8.0.101 
 - azure cli 2.52.0
 

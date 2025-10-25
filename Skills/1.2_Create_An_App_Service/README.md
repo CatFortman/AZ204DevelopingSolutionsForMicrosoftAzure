@@ -1,18 +1,17 @@
 ## Step 1
-Create a VM without remote access
-1. Register an application in your azure subscription
-2. Create a service policy on your application
-3. Update the azureauth.properties file with your Azure subscription parameters
-4. Use the dotnet run command in this skill folder to execute Program1
+Verify Visual Studio Tools
+1. Open Visual Studio 2022
+2. Open the Tools menu
+2. Click Get Tools & Features
+3. Verify ASP.NET and Web Development in The Web & Cloud section is chedked
    
 ## Step 2
-Create a VM with remote access
-1. Comment out Program1
-2. Uncomment Program2
-3. Use the dotnet run command in this skill folder to execute Program2
+Create and run new web app in VS Code
+1. Run `dotnet new web -n MySandboxWebApp`
+2. Run `dotnet run`
+3. Type Ctrl + C to stop the program
+
    
 ## Step 3
-Deploy a vm using an arm template
-1. Review the vm arm template in the ArmTemplates folder 
-2. Modify the vm-deployment-parameters.json file in the ArmTemplateParameters folder with your prefered values
-3. Run the each command in the deploy-vm.bat script in Scripts folder
+Create new Resource Group and App Service plan to host App Service
+1. 
