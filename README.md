@@ -21,11 +21,10 @@ Welcome to the repository for skills and labs related to the Microsoft Azure 204
 - VS Code Extensions:
     - C# Dev Kit (Microsoft)
     - Bicep (Microsoft)
-    - Azure Resources (Microsoft)
     - Azure Tools (Microsoft)
 - Visual Studio 2022
-- dotnet 8.0.101 
-- azure cli 2.52.0
+- dotnet 9.0.306
+- azure cli 2.77.0
 
 
 ## Skills
@@ -33,7 +32,7 @@ Welcome to the repository for skills and labs related to the Microsoft Azure 204
 Here is a list of skills implemented in this repository that are covered in Developing Solutions for Microsoft Azure 2021 edition:
 
 * Skill 1.1: Implement solutions that use virtual machines (COMPLETED)
-* Skill 1.2: Create Azure App Service web apps
+* Skill 1.2: Create Azure App Service web apps (COMPLETED)
 * Skill 1.3: Implement Azure functions
 * Skill 2.1: Develop solutions that use Cosmos DB storage
 * Skill 2.2: Develop solutions that use Blob Storage
