@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the repository for skills and labs related to the Microsoft Azure 204 exam: Developing Solutions for Microsoft Azure. This repository is intended to serve as a resource for those preparing for the exam, and it is based on the content from the exam reference book Developing Solutions for Microsoft Azure 2021 edition.
+Welcome to the repository for skills related to the Microsoft Azure 204 exam: Developing Solutions for Microsoft Azure. This repository is intended to serve as a resource for those preparing for the exam, and it is based on the content from the exam reference book Developing Solutions for Microsoft Azure 2021 edition.
 
 ### Study Resources
 
@@ -22,9 +22,12 @@ Welcome to the repository for skills and labs related to the Microsoft Azure 204
     - C# Dev Kit (Microsoft)
     - Bicep (Microsoft)
     - Azure Tools (Microsoft)
+    - Azurite (Microsoft)
 - Visual Studio 2022
 - dotnet 9.0.306
 - azure cli 2.77.0
+- [Azure Storage Explorer](https://azure.microsoft.com/en-us/products/storage/storage-explorer)
+- [Azure Cosmos DB Emulator](https://learn.microsoft.com/en-us/azure/cosmos-db/emulator)
 
 
 ## Skills
@@ -48,7 +51,7 @@ Here is a list of skills implemented in this repository that are covered in Deve
 
 ## Labs
 
-Here is a list of the hands-on labs implemented in this repository that are provided by Microsoft for practical experience:
+Here is a list of the hands-on labs that are provided by Microsoft for practical experience:
 
 * Lab 01: Build a web application on Azure platform as a service offerings
 * Lab 02: Implement task processing logic by using Azure Functions

@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "ImagesBlobStorage": "UseDevelopmentStorage=true",
+    "CosmosDBConnection": "AccountEndpoint=https://localhost:8081/;AccountKey=C2y6yDjf...==;",
+    "AzureSignalRConnectionString": "UseDevelopmentStorage=true"
+  }
+}
