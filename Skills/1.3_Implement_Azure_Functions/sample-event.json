@@ -1,0 +1,14 @@
+[
+  {
+    "id": "123",
+    "eventType": "Microsoft.Storage.BlobCreated",
+    "subject": "/blobServices/default/containers/images/blobs/WIN_20250118_21_33_51_Pro.jpg",
+    "eventTime": "2020-01-01T00:00:00Z",
+    "data": {
+      "api": "PutBlob",
+      "url": "images/WIN_20250118_21_33_51_Pro.jpg"
+    },
+    "dataVersion": "",
+    "metadataVersion": "1"
+  }
+]

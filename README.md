@@ -28,6 +28,7 @@ Welcome to the repository for skills related to the Microsoft Azure 204 exam: De
 - azure cli 2.77.0
 - [Azure Storage Explorer](https://azure.microsoft.com/en-us/products/storage/storage-explorer)
 - [Azure Cosmos DB Emulator](https://learn.microsoft.com/en-us/azure/cosmos-db/emulator)
+- [Azure Functions Core Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-csharp#tabpanel_1_windows)
 
 
 ## Skills
