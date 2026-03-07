@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "_1_3_Implement_Azure_Functions": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7024",
+      "launchBrowser": false
+    }
+  }
+}
