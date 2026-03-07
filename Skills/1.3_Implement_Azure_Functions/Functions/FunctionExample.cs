@@ -10,22 +10,25 @@ using Microsoft.Azure.Functions.Worker.Extensions.SignalRService;
 
 using Azure.Messaging.EventGrid;
 using Microsoft.Extensions.Logging;
+using Azure.Storage.Blobs;
+using Azure.Storage;
+using System.Text.Json;
 
 namespace Functions;
 
-public class BlobTriggerCSharp
+public class BlobEventProcessor
 {
     private readonly ILogger _logger;
 
-    public BlobTriggerCSharp(ILoggerFactory loggerFactory)
+    public BlobEventProcessor(ILoggerFactory loggerFactory)
     {
-        _logger = loggerFactory.CreateLogger<BlobTriggerCSharp>();
+        _logger = loggerFactory.CreateLogger<BlobEventProcessor>();
     }
 
-    [Function("BlobTriggerCSharp")]
+    [Function("BlobEventProcessor")]
     public FunctionOutput Run(
-        [EventGridTrigger] EventGridEvent eventGridEvent,
-        [BlobInput("{data.url}", Connection = "ImagesBlobStorage")] Stream imageBlob)
+            [EventGridTrigger] EventGridEvent eventGridEvent,
+            [BlobInput("{data.url}", Connection = "ImagesBlobStorage")] Stream imageBlob)
     {
         var document = new
         {
@@ -39,7 +42,7 @@ public class BlobTriggerCSharp
         {
             CosmosDocument = document,
             SignalRMessage = new SignalRMessageAction("newMessage")
-            {                
+            {
                 Arguments = new[] { document }
             }
         };

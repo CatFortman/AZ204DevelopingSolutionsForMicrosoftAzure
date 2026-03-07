@@ -1,0 +1,13 @@
+[
+  {
+    "id": "123",
+    "eventType": "Microsoft.Storage.BlobCreated",
+    "topic": "/subscriptions/test/resourceGroups/test/providers/Microsoft.Storage/storageAccounts/devstoreaccount1",
+    "subject": "/blobServices/default/containers/images/blobs/WIN_20250118_21_33_51_Pro.jpg",
+    "data": {
+      "url": "http://127.0.0.1:10000/devstoreaccount1/images/WIN_20250118_21_33_51_Pro.jpg"
+    },
+    "dataVersion": "1.0",
+    "metadataVersion": "1"
+  }
+]
