@@ -1,17 +1,7 @@
-using System;
-using System.IO;
-using System.Threading.Tasks;
-
 using Microsoft.Azure.Functions.Worker;
-using Microsoft.Azure.Functions.Worker.Extensions.EventGrid;
-using Microsoft.Azure.Functions.Worker.Extensions.Storage.Blobs;
-using Microsoft.Azure.Functions.Worker.Extensions.CosmosDB;
-using Microsoft.Azure.Functions.Worker.Extensions.SignalRService;
 
 using Azure.Messaging.EventGrid;
 using Microsoft.Extensions.Logging;
-using Azure.Storage.Blobs;
-using Azure.Storage;
 using System.Text.Json;
 
 namespace Functions;
@@ -30,21 +20,23 @@ public class BlobEventProcessor
             [EventGridTrigger] EventGridEvent eventGridEvent,
             [BlobInput("{data.url}", Connection = "ImagesBlobStorage")] Stream imageBlob)
     {
+        _logger.LogInformation("Blob stream length: {Length} bytes", imageBlob.Length);
+
         var document = new
         {
             id = Guid.NewGuid(),
-            description = eventGridEvent.Topic
+            description = eventGridEvent.Subject
         };
 
-        _logger.LogInformation("Event processed: {topic}", eventGridEvent.Topic);
+        _logger.LogInformation("Event processed: {subject}", eventGridEvent.Subject);
 
+        var signalRMessage = new SignalRMessageAction("newMessage") { Arguments = new[] { document } };
+        _logger.LogInformation("[MOCK] Would send to SignalR: {message}", JsonSerializer.Serialize(signalRMessage));
+
+        _logger.LogInformation("Save document to Cosmos DB: {document}", document.description.ToString());
         return new FunctionOutput
         {
-            CosmosDocument = document,
-            SignalRMessage = new SignalRMessageAction("newMessage")
-            {
-                Arguments = new[] { document }
-            }
+            CosmosDocument = document
         };
     }
 }
@@ -52,10 +44,7 @@ public class FunctionOutput
 {
     [CosmosDBOutput(
         databaseName: "GIS",
-        containerName: "Processed_images",
+        containerName: "Processed_Images",
         Connection = "CosmosDBConnection")]
     public object CosmosDocument { get; set; }
-
-    [SignalROutput(HubName = "notifications")]
-    public SignalRMessageAction SignalRMessage { get; set; }
 }

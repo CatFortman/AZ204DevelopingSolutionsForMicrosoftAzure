@@ -1,14 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-<ItemGroup>
-  <ProjectReference Include="..\Functions\_1_3_Implement_Azure_Functions.csproj" />
-</ItemGroup>
-
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+<ItemGroup>
+    <PackageReference Include="Azure.Messaging.EventGrid" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.EventGrid" Version="3.6.0" />
+  </ItemGroup>
 
 </Project>
